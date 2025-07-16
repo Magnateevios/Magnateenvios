@@ -2,28 +2,229 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Magnate Envíos</title>
   <style>
-    body { margin:0; font-family: 'Segoe UI', sans-serif; color:#333; }
-    header { background: url('images/hero-bg.jpg') center/cover no-repeat; height: 80vh; display:flex; align-items:center; justify-content:center; flex-direction:column; text-align:center; color:#fff; }
-    header h1 { font-size:3rem; margin-bottom:.5em; text-shadow:0 2px 8px rgba(0,0,0,.5); }
-    header p { font-size:1.25rem; margin-bottom:1.5em; }
-    .btn { padding:.75em 2em; margin:.5em; border:none; border-radius:4px; font-size:1rem; cursor:pointer; transition:.2s; }
-    .btn-primary { background:#007bff; color:#fff; }
-    .btn-primary:hover { background:#0056b3; }
-    .btn-secondary { background:#28a745; color:#fff; }
-    .btn-secondary:hover { background:#1e7e34; }
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f4faff;
+      color: #333;
+    }
+    nav {
+      background-color: #004080;
+      color: white;
+      display: flex;
+      justify-content: center;
+      padding: 1rem;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 1rem;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    header {
+      background-color: #004080;
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+    header p {
+      font-size: 1.2rem;
+      margin-top: 0.5rem;
+    }
+    .intro, .products {
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+    .intro {
+      background-color: #e6f0ff;
+      color: #003366;
+    }
+    .intro h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    .intro p {
+      max-width: 800px;
+      margin: 0 auto;
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }.products {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.5rem;
+    }
+    .card {
+      background-color: white;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      width: 300px;
+      padding: 1rem;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+      text-align: left;
+    }
+    .card h3 {
+      margin-top: 0;
+      color: #004080;
+    }
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 5px;
+      background-color: #e6f0ff;
+    }
+    .card ul {
+      padding-left: 1.2rem;
+    }
+    .price {
+      font-weight: bold;
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+    }
+    .whatsapp-button {
+      background-color: #25D366;
+      color: white;
+      padding: 0.6rem 1rem;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      display: inline-block;
+      margin-top: 0.8rem;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #004080;
+      color: white;
+    }
+
+    @media (max-width: 768px) {
+      .products {
+        flex-direction: column;
+        align-items: center;
+      }
+      .card {
+        width: 90%;
+      }
+      nav {
+        flex-wrap: wrap;
+      }
+    }
   </style>
 </head>
 <body>
-  <header>
+
+  <nav>
+    <a href="#inicio">Inicio</a>
+    <a href="#motos">Motos</a>
+    <a href="#triciclos">Triciclos</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+
+  <header id="inicio">
     <h1>Magnate Envíos</h1>
-    <p>Movilidad eléctrica para Cuba: triciclos y motos con libertad y poder.</p>
-    <div>
-      <a href="triciclos.html" class="btn btn-secondary">Ver Triciclos</a>
-      <a href="motos.html" class="btn btn-primary">Ver Motos</a>
-    </div>
+    <p>Soluciones de movilidad eléctrica y de combustión</p>
   </header>
+
+  <section class="intro">
+    <h2>Bienvenidos a Magnate Envíos</h2>
+    <p>
+      Nos especializamos en la venta de <strong>triciclos eléctricos, motos de batería y combustión</strong> ideales para transporte personal o comercial.
+      Calidad, potencia y eficiencia para moverte como un verdadero magnate. 
+    </p>
+  </section>
+
+  <!-- MOTOS -->
+  <section id="motos" class="products">
+    <h2 style="width:100%">Motos disponibles</h2>
+
+    <div class="card">
+      <img src="img/gixxer250.jpg" alt="GIXXER 250CC">
+      <h3>GIXXER 250CC</h3>
+      <div class="price">$2900 USD</div>
+      <ul>
+        <li>249cc, 4T, 6 velocidades</li>
+        <li>Inyección electrónica</li>
+        <li>ABS, 12L, 161 kg</li>
+      </ul>
+      <a href="https://wa.me/5351708899" class="whatsapp-button">Comprar</a>
+    </div>
+
+    <div class="card">
+      <img src="img/ub125.jpg" alt="UB125">
+      <h3>UB125</h3>
+      <div class="price">$2150 USD</div>
+      <ul>
+        <li>124cc, Automática</li>
+        <li>Encendido electrónico</li>
+        <li>Frenos disco, 10.5L</li>
+      </ul>
+      <a href="https://wa.me/5351708899" class="whatsapp-button">Comprar</a>
+    </div>
+
+    <!-- Puedes seguir agregando más motos aquí -->
+  </section>
+
+  <!-- TRICICLOS -->
+  <section id="triciclos" class="products">
+    <h2 style="width:100%">Triciclos disponibles</h2>
+
+    <div class="card">
+      <img src="img/triciclo1.jpg" alt="Triciclo Raly">
+      <h3>Triciclo Raly</h3>
+      <div class="price">$3690 USD</div>
+      <ul>
+        <li>Batería: 72V 55Ah</li>
+        <li>Autonomía: 100–120 km</li>
+        <li>Motor: 1500W</li>
+      </ul>
+      <a href="https://wa.me/5351708899" class="whatsapp-button">Comprar</a>
+    </div>
+
+    <div class="card">
+      <img src="img/triciclo2.jpg" alt="Triciclo One Bot">
+      <h3>Triciclo One Bot</h3>
+      <div class="price">$3200 USD</div>
+      <ul>
+        <li>Batería: 72V 45Ah</li>
+        <li>Autonomía: 120 km</li>
+        <li>Motor: 1500W</li>
+      </ul>
+      <a href="https://wa.me/5351708899" class="whatsapp-button">Comprar</a>
+    </div>
+
+    <!-- Más triciclos aquí -->
+  </section>
+
+  <!-- CONTACTO -->
+  <section id="contacto" class="intro">
+    <h2>Contáctanos</h2>
+    <p>¿Tienes dudas o quieres hacer un pedido personalizado?</p>
+    <a href="https://wa.me/5351708899" class="whatsapp-button">Escríbenos por WhatsApp</a>
+  </section>
+
+  <footer>
+    &copy; 2025 Magnate Envíos · Todos los derechos reservados
+  </footer>
+
 </body>
 </html>
+
