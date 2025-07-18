@@ -15,7 +15,7 @@
     header {
       background-color: #004080;
       color: white;
-      padding: 2rem;
+      padding: 1.5rem;
       text-align: center;
     }
     header h1 {
@@ -24,9 +24,14 @@
     }
     .products {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      grid-template-columns: 1fr;
       gap: 1.5rem;
-      padding: 2rem;
+      padding: 2rem 1rem;
+    }
+    @media (min-width: 600px) {
+      .products {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      }
     }
     .card {
       background-color: white;
@@ -54,18 +59,22 @@
       margin-top: 0.5rem;
       font-size: 1.1rem;
     }
-    .whatsapp-button {
-      display: block;
+    .buttons {
       text-align: center;
       margin: 2rem auto;
+    }
+    .btn {
       background: #25D366;
       color: white;
-      padding: 1rem 2rem;
-      font-size: 1rem;
+      padding: 1rem 1.5rem;
       border-radius: 5px;
       text-decoration: none;
       font-weight: bold;
-      width: fit-content;
+      margin: 0.5rem;
+      display: inline-block;
+    }
+    .btn.back {
+      background-color: #004080;
     }
   </style>
 </head>
@@ -75,7 +84,7 @@
   </header>
 
   <section class="products">
-    <!-- MOTO 1 -->
+
     <div class="card">
       <img src="img/moto1.jpg" alt="AGNI R3">
       <h3>AGNI R3</h3>
@@ -88,153 +97,144 @@
       </ul>
     </div>
 
-    <!-- MOTO 2 -->
     <div class="card">
-      <img src="img/moto2.jpg" alt="ZIP PERLIT">
-      <h3>ZIP PERLIT</h3>
-      <div class="price">$1450 USD</div>
+      <img src="img/moto2.jpg" alt="Rider Galaxy">
+      <h3>Rider Galaxy</h3>
+      <div class="price">$3200 USD</div>
       <ul>
-        <li>Motor 4 tiempos / 49.6cc</li>
-        <li>Transmisión automática</li>
-        <li>Velocidad máx: 60 km/h</li>
-        <li>Capacidad tanque: 4.8 L</li>
+        <li>Motor 3000W</li>
+        <li>Batería 72V/45Ah</li>
+        <li>Velocidad máx: 75 km/h</li>
+        <li>Autonomía: 100–120 km</li>
       </ul>
     </div>
 
-    <!-- MOTO 3 -->
     <div class="card">
-      <img src="img/moto3.jpg" alt="KAIYI">
-      <h3>KAIYI</h3>
-      <div class="price">$2200 USD</div>
+      <img src="img/moto3.jpg" alt="AGNI R6">
+      <h3>AGNI R6</h3>
+      <div class="price">$3650 USD</div>
       <ul>
-        <li>Motor eléctrico 3000W</li>
-        <li>Batería 72V/32Ah</li>
-        <li>Velocidad máx: 65 km/h</li>
-        <li>Autonomía: 80–100 km</li>
+        <li>Motor eléctrico 5000W</li>
+        <li>Batería 72V/60Ah</li>
+        <li>Velocidad máx: 95 km/h</li>
+        <li>Autonomía: 130–150 km</li>
       </ul>
     </div>
 
-    <!-- MOTO 4 -->
     <div class="card">
-      <img src="img/moto4.jpg" alt="LEXUS">
-      <h3>LEXUS</h3>
-      <div class="price">$2500 USD</div>
+      <img src="img/moto4.jpg" alt="New T9 Pro">
+      <h3>New T9 Pro</h3>
+      <div class="price">$2950 USD</div>
       <ul>
         <li>Motor eléctrico 3000W</li>
         <li>Batería 72V/40Ah</li>
-        <li>Velocidad máx: 70 km/h</li>
-        <li>Autonomía: 90–110 km</li>
+        <li>Velocidad máx: 80 km/h</li>
+        <li>Autonomía: 100–120 km</li>
       </ul>
     </div>
 
-    <!-- MOTO 5 -->
     <div class="card">
-      <img src="img/moto5.jpg" alt="KEWESAKI">
-      <h3>KEWESAKI</h3>
+      <img src="img/moto5.jpg" alt="E-Bike Striker">
+      <h3>E-Bike Striker</h3>
       <div class="price">$3100 USD</div>
       <ul>
-        <li>Motor eléctrico 5000W</li>
+        <li>Motor 3000W</li>
         <li>Batería 72V/50Ah</li>
-        <li>Velocidad máx: 90 km/h</li>
-        <li>Autonomía: 100–130 km</li>
-      </ul>
-    </div>
-
-    <!-- MOTO 6 -->
-    <div class="card">
-      <img src="img/moto6.jpg" alt="JZ125">
-      <h3>JZ125</h3>
-      <div class="price">$2100 USD</div>
-      <ul>
-        <li>Motor 124.6cc (5 marchas)</li>
-        <li>Velocidad máx: 90 km/h</li>
-        <li>Frenos disco y tambor</li>
-      </ul>
-    </div>
-
-    <!-- MOTO 7 -->
-    <div class="card">
-      <img src="img/moto7.jpg" alt="AGNI LX">
-      <h3>AGNI LX</h3>
-      <div class="price">$3150 USD</div>
-      <ul>
-        <li>Motor eléctrico 4000W</li>
-        <li>Batería 72V/45Ah</li>
-        <li>Velocidad máx: 80 km/h</li>
+        <li>Velocidad máx: 85 km/h</li>
         <li>Autonomía: 110–130 km</li>
       </ul>
     </div>
 
-    <!-- MOTO 8 -->
     <div class="card">
-      <img src="img/moto8.jpg" alt="ROMEL ELÉCTRICA">
-      <h3>ROMEL ELÉCTRICA</h3>
-      <div class="price">$1900 USD</div>
+      <img src="img/moto6.jpg" alt="Super Sport L3">
+      <h3>Super Sport L3</h3>
+      <div class="price">$3500 USD</div>
       <ul>
-        <li>Motor 2000W</li>
-        <li>Batería 72V/32Ah</li>
-        <li>Velocidad máx: 60 km/h</li>
-        <li>Autonomía: 80–90 km</li>
+        <li>Motor 4000W</li>
+        <li>Batería 72V/60Ah</li>
+        <li>Velocidad máx: 100 km/h</li>
+        <li>Autonomía: 140–160 km</li>
       </ul>
     </div>
 
-    <!-- MOTO 9 -->
     <div class="card">
-      <img src="img/moto9.jpg" alt="ROMEL GASOLINA">
-      <h3>ROMEL GASOLINA</h3>
-      <div class="price">$1650 USD</div>
+      <img src="img/moto7.jpg" alt="Ducati Monster 696 (Gasolina)">
+      <h3>Ducati Monster 696 (Gasolina)</h3>
+      <div class="price">$4200 USD</div>
       <ul>
-        <li>Motor 4 tiempos 125cc</li>
-        <li>Capacidad: 5.5 L</li>
-        <li>Velocidad máx: 85 km/h</li>
-        <li>Transmisión automática</li>
+        <li>Motor 696cc</li>
+        <li>Gasolina premium</li>
+        <li>Velocidad máx: 210 km/h</li>
+        <li>Autonomía: 250–300 km</li>
       </ul>
     </div>
 
-    <!-- MOTO 10 -->
     <div class="card">
-      <img src="img/moto10.jpg" alt="FUXI">
-      <h3>FUXI</h3>
-      <div class="price">$1850 USD</div>
+      <img src="img/moto8.jpg" alt="Yamaha FZ16 (Gasolina)">
+      <h3>Yamaha FZ16 (Gasolina)</h3>
+      <div class="price">$2700 USD</div>
       <ul>
-        <li>Motor 125cc automático</li>
-        <li>Velocidad máx: 90 km/h</li>
-        <li>Tanque: 5 L</li>
+        <li>Motor 153cc</li>
+        <li>Gasolina</li>
+        <li>Velocidad máx: 120 km/h</li>
+        <li>Autonomía: 200–250 km</li>
       </ul>
     </div>
 
-    <!-- MOTO 11 -->
     <div class="card">
-      <img src="img/moto11.jpg" alt="JIANSHE">
-      <h3>JIANSHE</h3>
-      <div class="price">$2150 USD</div>
+      <img src="img/moto9.jpg" alt="Suzuki GN125 (Gasolina)">
+      <h3>Suzuki GN125 (Gasolina)</h3>
+      <div class="price">$2600 USD</div>
       <ul>
-        <li>Motor 125cc, 4 tiempos</li>
-        <li>Transmisión manual</li>
-        <li>Tanque: 14 L</li>
-        <li>Velocidad máx: 95 km/h</li>
+        <li>Motor 125cc</li>
+        <li>Gasolina</li>
+        <li>Velocidad máx: 110 km/h</li>
+        <li>Autonomía: 200–220 km</li>
       </ul>
     </div>
 
-    <!-- MOTO 12 -->
     <div class="card">
-      <img src="img/moto12.jpg" alt="AGNI LX 2">
-      <h3>AGNI LX 2</h3>
-      <div class="price">$3250 USD</div>
+      <img src="img/moto10.jpg" alt="Honda CBR250R (Gasolina)">
+      <h3>Honda CBR250R (Gasolina)</h3>
+      <div class="price">$3900 USD</div>
       <ul>
-        <li>Motor eléctrico 4000W</li>
-        <li>Batería 72V/55Ah</li>
-        <li>Autonomía: 130–140 km</li>
-        <li>Velocidad máx: 90 km/h</li>
+        <li>Motor 250cc</li>
+        <li>Gasolina</li>
+        <li>Velocidad máx: 180 km/h</li>
+        <li>Autonomía: 240–270 km</li>
       </ul>
     </div>
+
+    <div class="card">
+      <img src="img/moto11.jpg" alt="Bajaj Pulsar NS200 (Gasolina)">
+      <h3>Bajaj Pulsar NS200 (Gasolina)</h3>
+      <div class="price">$3100 USD</div>
+      <ul>
+        <li>Motor 199cc</li>
+        <li>Gasolina</li>
+        <li>Velocidad máx: 135 km/h</li>
+        <li>Autonomía: 220–250 km</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <img src="img/moto12.jpg" alt="Keeway RKS 150 (Gasolina)">
+      <h3>Keeway RKS 150 (Gasolina)</h3>
+      <div class="price">$2500 USD</div>
+      <ul>
+        <li>Motor 150cc</li>
+        <li>Gasolina</li>
+        <li>Velocidad máx: 115 km/h</li>
+        <li>Autonomía: 210–230 km</li>
+      </ul>
+    </div>
+
   </section>
 
-  <div style="text-align:center; margin: 2rem;">
-  <a class="whatsapp-button" href="https://wa.me/5351708899" target="_blank">Comprar por WhatsApp</a>
-  <br><br>
-  <a class="whatsapp-button" href="index.html" style="background-color:#004080;">Volver al Inicio</a>
-</div>
-
+  <div class="buttons">
+    <a class="btn" href="https://wa.me/5351708899" target="_blank">Comprar por WhatsApp</a>
+    <a class="btn back" href="index.html">Volver al Inicio</a>
+  </div>
 </body>
 </html>
+
