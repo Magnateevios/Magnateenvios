@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Triciclos - Magnate Envíos</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f4faff;
+      color: #333;
+    }
+    header {
+      background-color: #004080;
+      color: white;
+      padding: 2rem;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      padding: 2rem;
+    }
+    .card {
+      background-color: white;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 1rem;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 5px;
+      background-color: #e6f0ff;
+    }
+    .card h3 {
+      margin-top: 0.5rem;
+      color: #004080;
+    }
+    .card ul {
+      padding-left: 1.2rem;
+    }
+    .price {
+      font-weight: bold;
+      margin-top: 0.5rem;
+      font-size: 1.1rem;
+    }
+    .whatsapp-button {
+      display: block;
+      text-align: center;
+      margin: 2rem auto;
+      background: #25D366;
+      color: white;
+      padding: 1rem 2rem;
+      font-size: 1rem;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      width: fit-content;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Triciclos Eléctricos</h1>
+  </header>
+
+  <section class="products">
+    <div class="card">
+      <img src="img/triciclo1.jpg" alt="Triciclo Raly">
+      <h3>Triciclo Raly</h3>
+      <div class="price">$3690 USD</div>
+      <ul>
+        <li>Batería: 72V 55Ah</li>
+        <li>Autonomía: 100–120 km</li>
+        <li>Dimensiones: 160x110x55 cm, Ejes: 2370 mm</li>
+        <li>Tiempo de carga: 7–10 h</li>
+        <li>Motor: 1500W</li>
+        <li>Carga máxima: 400 kg</li>
+        <li>Velocidad máxima: 30–50 km/h</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <img src="img/triciclo2.jpg" alt="Triciclo One Bot">
+      <h3>Triciclo One Bot</h3>
+      <div class="price">$3200 USD</div>
+      <ul>
+        <li>Batería: 72V 45Ah</li>
+        <li>Autonomía: 120 km</li>
+        <li>Dimensiones: 300x110x50 cm</li>
+        <li>Tiempo de carga: 8–10 h</li>
+        <li>Motor: 1500W</li>
+        <li>Carga máxima: 1000 kg</li>
+        <li>Velocidad máxima: 50 km/h</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <img src="img/triciclo3.jpg" alt="Triciclo Raly 2">
+      <h3>Triciclo Raly</h3>
+      <div class="price">$3750 USD</div>
+      <ul>
+        <li>Batería: Raly 2LT PO4 72V</li>
+        <li>Autonomía: 120–130 km</li>
+        <li>Dimensiones: 350x120x55 cm</li>
+        <li>Tiempo de carga: 8–10 h</li>
+        <li>Motor: 1500W</li>
+        <li>Carga máxima: 1000 kg</li>
+        <li>Velocidad máxima: 50 km/h</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <img src="img/triciclo4.jpg" alt="Triciclo Jinli">
+      <h3>Triciclo Jinli</h3>
+      <div class="price">$4000 USD</div>
+      <ul>
+        <li>Batería: 60V 45Ah</li>
+        <li>Autonomía: 100 km</li>
+        <li>Dimensiones: 290x110x180 cm</li>
+        <li>Tiempo de carga: 6–8 h</li>
+        <li>Motor: 1300W</li>
+        <li>Carga máxima: 500 kg</li>
+        <li>Velocidad máxima: 30–40 km/h</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <img src="img/triciclo5.jpg" alt="Triciclo One Bot 2">
+      <h3>Triciclo One Bot</h3>
+      <div class="price">$2960 USD</div>
+      <ul>
+        <li>Batería: 60V 52Ah</li>
+        <li>Autonomía: 120 km</li>
+        <li>Dimensiones: 300x110x50 cm</li>
+        <li>Tiempo de carga: 5–7 h</li>
+        <li>Motor: 1000W</li>
+        <li>Carga máxima: 400 kg</li>
+        <li>Velocidad máxima: 35 km/h</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <img src="img/triciclo6.jpg" alt="Triciclo Ladea EV">
+      <h3>Triciclo Ladea EV</h3>
+      <div class="price">$3350 USD</div>
+      <ul>
+        <li>Batería: 60V 60Ah</li>
+        <li>Autonomía: 70–80 km</li>
+        <li>Dimensiones: 150x100x55 cm</li>
+        <li>Tiempo de carga: 6–8 h</li>
+        <li>Motor: Power 120 series, 1000W</li>
+        <li>Carga máxima: 470 kg</li>
+        <li>Velocidad máxima: 30–35 km/h</li>
+        <li>Extensor de rango integrado</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <img src="img/triciclo7.jpg" alt="Triciclo Changaly">
+      <h3>Triciclo Changaly</h3>
+      <div class="price">$4200 USD</div>
+      <ul>
+        <li>Batería: Raly 2LT PO4 72V 60Ah</li>
+        <li>Autonomía: 120–130 km</li>
+        <li>Dimensiones: 350x120x55 cm, Ejes: 2370 mm</li>
+        <li>Tiempo de carga: 7–10 h</li>
+        <li>Motor: 1000W</li>
+        <li>Carga máxima: 400 kg</li>
+        <li>Velocidad máxima: 30–50 km/h</li>
+      </ul>
+    </div>
+  </div>
+
+  <a class="whatsapp-button" href="https://wa.me/5351708899" target="_blank">Comprar por WhatsApp</a>
+</section>
+
+</body>
+</html>
