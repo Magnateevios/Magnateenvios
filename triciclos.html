@@ -15,7 +15,7 @@
     header {
       background-color: #004080;
       color: white;
-      padding: 2rem;
+      padding: 1.5rem;
       text-align: center;
     }
     header h1 {
@@ -24,9 +24,14 @@
     }
     .products {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      grid-template-columns: 1fr;
       gap: 1.5rem;
-      padding: 2rem;
+      padding: 2rem 1rem;
+    }
+    @media (min-width: 600px) {
+      .products {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      }
     }
     .card {
       background-color: white;
@@ -54,18 +59,22 @@
       margin-top: 0.5rem;
       font-size: 1.1rem;
     }
-    .whatsapp-button {
-      display: block;
+    .buttons {
       text-align: center;
       margin: 2rem auto;
+    }
+    .btn {
       background: #25D366;
       color: white;
-      padding: 1rem 2rem;
-      font-size: 1rem;
+      padding: 1rem 1.5rem;
       border-radius: 5px;
       text-decoration: none;
       font-weight: bold;
-      width: fit-content;
+      margin: 0.5rem;
+      display: inline-block;
+    }
+    .btn.back {
+      background-color: #004080;
     }
   </style>
 </head>
@@ -75,6 +84,7 @@
   </header>
 
   <section class="products">
+
     <div class="card">
       <img src="img/triciclo1.jpg" alt="Triciclo Raly">
       <h3>Triciclo Raly</h3>
@@ -180,15 +190,13 @@
         <li>Velocidad máxima: 30–50 km/h</li>
       </ul>
     </div>
+
+  </section>
+
+  <div class="buttons">
+    <a class="btn" href="https://wa.me/5351708899" target="_blank">Comprar por WhatsApp</a>
+    <a class="btn back" href="index.html">Volver al Inicio</a>
   </div>
-
-  <div style="text-align:center; margin: 2rem;">
-  <a class="whatsapp-button" href="https://wa.me/5351708899" target="_blank">Comprar por WhatsApp</a>
-  <br><br>
-  <a class="whatsapp-button" href="index.html" style="background-color:#004080;">Volver al Inicio</a>
-</div>
-
-</section>
-
 </body>
 </html>
+
