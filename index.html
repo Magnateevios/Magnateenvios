@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Magnate Envíos</title>
   <style>
     * {
@@ -17,36 +17,61 @@
     header {
       background-color: #004080;
       color: white;
-      padding: 2rem;
+      padding: 2rem 1rem;
       text-align: center;
+    }
+    header img {
+      max-width: 120px;
+      height: auto;
+      margin-bottom: 1rem;
     }
     header h1 {
       margin: 0;
-      font-size: 2.5rem;
+      font-size: 2.2rem;
     }
     header p {
+      font-size: 1.1rem;
       margin-top: 0.5rem;
-      font-size: 1.2rem;
     }
     nav {
-      margin-top: 1rem;
+      margin-top: 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      align-items: center;
     }
     nav a {
       background-color: #25D366;
       color: white;
-      padding: 0.7rem 1.2rem;
-      margin: 0 0.5rem;
+      padding: 0.9rem 1.5rem;
       text-decoration: none;
-      border-radius: 5px;
+      border-radius: 8px;
       font-weight: bold;
-      display: inline-block;
+      font-size: 1rem;
+      width: 80%;
+      max-width: 300px;
+      text-align: center;
+    }
+
+    @media (min-width: 600px) {
+      nav {
+        flex-direction: row;
+        justify-content: center;
+      }
+      nav a {
+        width: auto;
+      }
     }
   </style>
 </head>
 <body>
   <header>
+    <!-- Aquí irá tu logo -->
+    <img src="img/logo.png" alt="Magnate Envíos Logo" />
+    
     <h1>Magnate Envíos</h1>
-    <p>Somos la mejor empresa de Cuba en ventas y envíos de motos de gasolina, motos eléctricas y triciclos eléctricos. Ofrecemos productos confiables, potentes y con respaldo garantizado para tu movilidad.</p>
+    <p>Somos la mejor empresa de Cuba en ventas y envíos de motos de gasolina, motos eléctricas y triciclos eléctricos.</p>
+    
     <nav>
       <a href="motos.html">Ver Motos</a>
       <a href="triciclos.html">Ver Triciclos</a>
@@ -55,4 +80,5 @@
   </header>
 </body>
 </html>
+
 
