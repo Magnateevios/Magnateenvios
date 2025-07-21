@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bienvenido - Magnate Envíos</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body {
+      height: 100%;
+      font-family: Arial, sans-serif;
+    }
+    body {
+      /* Imagen de fondo a pantalla completa */
+      background: url("img/fondo.jpg") center center no-repeat;
+      background-size: cover;
+      position: relative;
+      color: white;
+      text-align: center;
+    }
+    /* Capa semitransparente para mejorar legibilidad */
+    body::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-color: rgba(0,0,0,0.5);
+      z-index: 0;
+    }
+    .container {
+      position: relative;
+      z-index: 1;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 1rem;
+    }
+    .container img.logo {
+      max-width: 150px;
+      margin-bottom: 1rem;
+    }
+    .container h1 {
+      font-size: 2.4rem;
+      margin-bottom: 0.5rem;
+    }
+    .container p {
+      font-size: 1rem;
+      margin-bottom: 2rem;
+      max-width: 300px;
+    }
+    a.button {
+      display: inline-block;
+      padding: 1rem 2rem;
+      background-color: #5AB8FF;
+      color: white;
+      text-decoration: none;
+      font-size: 1rem;
+      font-weight: bold;
+      border-radius: 50px;
+      transition: background 0.3s;
+    }
+    a.button:hover {
+      background-color: #82CFFF;
+    }
+    @media (min-width: 600px) {
+      .container h1 { font-size: 3rem; }
+      .container p  { font-size: 1.2rem; max-width: 400px; }
+      a.button     { font-size: 1.1rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img class="logo" src="img/logo.png" alt="Logo Magnate Envíos">
+    <h1>Bienvenido a MAGNATE ENVIOS</h1>
+    <p>Tu solución de confianza en motos y triciclos eléctricos y de combustión</p>
+    <a class="button" href="principal.html">Entrar a la Tienda</a>
+  </div>
+</body>
+</html>
